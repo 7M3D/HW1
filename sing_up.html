@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> sign up </title>
+    <style>
+        body {
+            background-color: lightgray;
+        }
+        
+        h1 {
+            text-align: center;
+            font-size: 50px;
+            color: black;
+        }
+        
+        h4 {
+            text-align: center;
+            font-size: 20px;
+            color: black;
+        }
+        
+        form {
+            margin: 20px auto;
+            width: 320px;
+            color: darkblue;
+        }
+        
+        input {
+            padding: 10px;
+            font-size: inherit;
+        }
+        
+        input[type="text"] {
+            display: block;
+            margin-bottom: 25px;
+            width: 100%;
+            border: 2px solid black;
+            background: #FAF6D9;
+        }
+        
+        input[type="password"] {
+            display: block;
+            margin-bottom: 25px;
+            width: 100%;
+            border: 2px solid black;
+            background: #FAF6D9;
+        }
+        
+        input[type="email"] {
+            display: block;
+            margin-bottom: 25px;
+            width: 100%;
+            border: 2px solid black;
+            background: #FAF6D9;
+        }
+        
+        input[type="tel"] {
+            display: flexbox;
+            margin-bottom: 25px;
+            width: 75%;
+            border: 2px solid black;
+            background: #FAF6D9;
+        }
+        
+        input[type="checkbox"] {
+            margin: 2 10px 5px;
+        }
+        
+        input[type="submit"] {
+            width: 344px;
+            height: 45px;
+            border: none;
+            background-color: steelblue;
+        }
+        
+        input:focus {
+            background: white;
+        }
+        
+        input[type="checkbox"]:checked+label {
+            font-weight: bold;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- the left of the header is logo of the wibsite and the right of it is login  -->
+
+    <header style=" align-content: center;">
+        <div style="width: 25%; float: left;">
+            <img src="HW1_images/Logo.png" alt="logo" width="30%">
+        </div>
+        <div style="float: right; ">
+            <table>
+                <tr>
+                    <th> <img src="HW1_images/Login.png" alt="login" width="50px"></th>
+                </tr>
+                <tr>
+                    <td> <a href="sign_in.html"> sign in</a> </td>
+                </tr>
+            </table>
+        </div>
+        <div>
+            <ul style="text-align: center; padding: 15px;">
+                <li style="display: inline-block;list-style-type: disc; margin: 10px;">MAPS
+                </li>
+                <li style="display: inline-block;list-style-type: disc; margin: 10px;">RESOURCES</li>
+                <li style="display: inline-block;list-style-type: disc; margin: 10px;">EVENTS</li>
+                <li style="display: inline-block;list-style-type: disc; margin: 10px;">PRODUCTS</li>
+            </ul>
+        </div>
+    </header>
+    <!-- the nav is about the form registration  -->
+    <nav style=" width: 100%; text-align: justify">
+        <h1>
+            Registration
+        </h1>
+        <form method="POST" action="singUp.php">
+            <p>
+                <label for="FullName"><b>Full name:</b></label><br>
+                <input type="text" name="FullName" placeholder="First Last" required>
+            </p>
+            <p>
+                <label for="email"><b>Email Adress:</b></label><br>
+                <input type="email" name="email" placeholder="exapmle@gmail.com" required>
+            </p>
+            <p>
+                <label for="Password"><b>Password:</b></label><br>
+                <input type="password" name="Password" required>
+            </p>
+            <p>
+                <label for="Confirm_Password"><b>Confirm Password: </b></label><br>
+                <input type="password" name="Confirm_Password" required>
+            </p>
+
+            <p>
+                <label for="Tel"><b>Tel:</b></label><br>
+                <select style="width: 50px">
+                    <option>966</option>
+                    <option>977</option>
+                    <option>1</option>
+                    <option>983</option>
+                </select>
+                <input type="tel" name="Tel" placeholder="123-456-789" pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}" required>
+            </p>
+            <div>
+                <label for="FavCity"><b>Favorite cities:</b></label><br>
+                <input type="checkbox" id="city1" name="city1" value="Ryadh">
+                <label for="city1"> Riyadh</label><br>
+                <input type="checkbox" id="city2" name="city2" value="Eastern province">
+                <label for="city2"> Eastern province</label><br>
+                <input type="checkbox" id="city3" name="city3" value="Makkah">
+                <label for="city3"> Makkah</label><br>
+                <input type="checkbox" id="city4" name="city4" value="Madinah">
+                <label for="city4">Madinah</label><br>
+                <input type="checkbox" id="city5" name="city5" value="Qasim">
+                <label for="city5">Qasim</label><br>
+                <input type="checkbox" id="city6" name="city6" value="Tabuk">
+                <label for="city6">Tabuk</label><br>
+                <input type="checkbox" id="city7" name="city7" value="Asir">
+                <label for="city7">Asir</label><br>
+                <input type="checkbox" id="city8" name="city8" value="Hail">
+                <label for="city8">Hail</label><br><br>
+            </div>
+
+            <input type="submit" value="Sing up">
+        </form>
+    </nav>
+
+    <footer>
+        <!-- the footer is my name, ID and link to home page  -->
+        <h4>Made by Mohammed Alnakhli</h4>
+        <h4>ID:201663020</h4>
+        <h4><a href="index.html">Home page</a></h4>
+    </footer>
+</body>
+
+
+</html>
